@@ -1,11 +1,15 @@
 {
   "name": "logger-to-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Módulo para escrever log em arquivo",
   "main": "lib/index.js",
   "scripts": {
     "test": "test",
     "gulp": "node_modules/.bin/gulp --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viewup/logger-to-file"
   },
   "keywords": [
     "log"
