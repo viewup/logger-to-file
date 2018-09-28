@@ -18,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "crypto": "^1.0.1",
-    "email-module": "^1.1.0",
+    "email-module": "^1.1.1",
     "fs": "0.0.1-security",
     "moment": "^2.22.2",
     "path": "^0.12.7"

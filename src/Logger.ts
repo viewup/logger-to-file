@@ -2,7 +2,7 @@ import moment from "moment";
 import path from "path";
 import fs from "fs";
 import crypto from "crypto";
-import { sendMail } from "email-module";
+import sendMail from "email-module";
 
 export default class Logger {
 
