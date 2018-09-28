@@ -81,21 +81,19 @@ export default class Logger {
 
     /**
      *
+     * Send mail with last file content.
+     * You can pass mail server setting, like SMTP transporter form nodemailer.
+     *
+     * @see {@link https://nodemailer.com/about/}
+     * @see {@link https://nodemailer.com/smtp/}
+     * @param {{ [pool]: Boolean, host: String, port: Number, [secure]: Boolean, [auth]: { user: String, pass: String }}} serverSettings
+     * @param {{ from: String, to: String, subject: String, [text]: String, html: String }} messageSettings
      * @return {Promise<string>}
      */
-    async sendMail() {
+    async sendMail(serverSettings, messageSettings) {
+        //messageSettings.
         try {
-            const result = await sendMail({
-                "port": 8086,
-                "host": "192.168.0.250",
-                secure: false, // true for 465, false for other ports
-            }, {
-                from: 'Sender Name <sender@example.com>',
-                to: 'Recipient <recipient@example.com>',
-                subject: 'Nodemailer is unicode friendly ✔',
-                text: 'Hello to myself!',
-                html: '<p><b>Hello</b> to myself!</p>'
-            });
+            const result = await sendMail(serverSettings, messageSettings);
             console.log("WILL SEND TO MAIL", this.file);
             return "DONE";
         } catch (e) {
