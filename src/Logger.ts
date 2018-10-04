@@ -1,8 +1,8 @@
-import moment from "moment";
-import path from "path";
-import fs from "fs";
-import crypto from "crypto";
-import sendMail from "email-module";
+import * as moment from "moment";
+import * as path from "path";
+import * as fs from "fs";
+import * as crypto from "crypto";
+import * as Mail from "email-module";
 
 export default class Logger {
 
@@ -93,7 +93,7 @@ export default class Logger {
     async sendMail(serverSettings, messageSettings) {
         //messageSettings.
         try {
-            const result = await sendMail(serverSettings, messageSettings);
+            const result = await Mail.default.sendMail(serverSettings, messageSettings);
             console.log("WILL SEND TO MAIL", this.file);
             return "DONE";
         } catch (e) {
