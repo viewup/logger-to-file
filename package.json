@@ -1,6 +1,6 @@
 {
   "name": "logger-to-file",
-  "version": "2.1.5",
+  "version": "3.1.6",
   "description": "Módulo para escrever log em arquivo",
   "main": "lib/index.js",
   "scripts": {
